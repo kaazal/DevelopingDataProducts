@@ -1,0 +1,45 @@
+---
+title: "Developing Data Products"
+author: "Kaazal"
+date: "17 February 2019"
+output:
+  slidy_presentation: default
+  ioslides_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## STORMDATA
+
+SYNOPSIS : Storms and other severe weather events can cause both public health and economic problems for communities and municipalities. Many severe events can result in fatalities, injuries, and property damage, and preventing such outcomes to the extent
+possible is a key concern.
+
+This project involves exploring the U.S. National Oceanic and Atmospheric Administration's (NOAA) storm database. This database tracks characteristics of major storms and weather events in the United States, including when and where they occur, as well as estimates of any fatalities, injuries, and property damage.
+
+
+
+## Shiny App
+
+1. This shiny app explores US NATIONAL STORM DATA
+2. User Chooses different impact targets
+3. Displayds plots depicting most severe waether events
+
+
+## Data processig
+
+This app uses filtered and analysed data from the dataset of US NOAA (national oceanic and atmospheric administration)
+
+	ui.R(User Interface)
+	1.Radio buttons are taken to select the most harmful events that affect the population
+	2.In the main panel, plots are Invoked
+	
+	Server.R
+	1. Analysed stormdata is taken and used in this shiny app
+	2. As the output, the plots are displayed according to the radiobuttons
+
+
+## Visit below URL for the Shiny App.
+
+https://kaazal.shinyapps.io/StormProduct/
