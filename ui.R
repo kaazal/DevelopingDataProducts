@@ -9,7 +9,12 @@ fluidPage(
     ),
     
     mainPanel(
-        
+      textOutput("text"),
+      br(),
+      textOutput("text1"),
+      br(),
+      textOutput("message"),
+      br(),
       plotOutput("plots")
     )
   )

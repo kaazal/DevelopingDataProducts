@@ -59,6 +59,23 @@ ECONOMIC <- function(Stormdata){
 
 function(input, output) {
   
+  output$text <- renderText("This app uses filtered and analysed data from the dataset of US NOAA (National Oceanic and Atmospheric Administration).
+                            The plots presented in this shiny app displays the most harmful weather events with the top ten fatalities,injuries and the greatest economic consequences with respect to population health events.")
+  
+  output$text1 <- renderText("Select the option on the left side to display respective plot.")
+ 
+  output$message <- renderText(
+    
+    if(input$pType == "TOP_FATALITIES"){
+        paste0("Types of events that are most harmful with respect to population health Events with highest Fatalities.")
+    } else if(input$pType == "TOP_INJURIES"){
+        paste0("Types of Events that are most harmful with respect to population health Events with highest Injuries." )
+    } else if(input$pType == "TOP_ECONOMIC_CONSEQUENCES"){
+        paste0("Types of Events that have the Greatest Economic Consequences, Events with highest Property damages." )
+    }
+  
+    )
+  
   output$plots <- renderPlot({
           plotType(Stormdata, input$pType)
     })
